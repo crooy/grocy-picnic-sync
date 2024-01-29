@@ -6,11 +6,16 @@ name = "pypi"
 [packages]
 click = "*"
 colorama = "*"
+python-picnic-api = "*"
+pygrocy = "*"
+load-dotenv = "*"
 
 [dev-packages]
 pylint = "*"
 pytest = "*"
 black = "*"
+pipenv = "*"
+install = "*"
 
 [requires]
 python_version = "3.10"
