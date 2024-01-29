@@ -11,4 +11,4 @@ class ProductSync():
 
      def search(self, query: str):
           products = self.picnic.searchProduct(query);
-          return json.dumps(products, indent=4);
+          return list(map(lambda p: f"{p['id']} : {p['name']} {p['unit_quantity']} = {p['price']/100} EURO", products));

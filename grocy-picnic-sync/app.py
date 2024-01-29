@@ -20,4 +20,5 @@ class GrocyPicnicSync():
 
     def syncProducts(self, query:str):
         return self.product.search(query)
+    
 

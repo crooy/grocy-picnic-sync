@@ -1,18 +1,20 @@
 """
 Sample App Command-Line Interface
 """
-from .app import GrocyPicnicSync
 import click
+import json
+from .app import GrocyPicnicSync
 
 app = GrocyPicnicSync();
 
 @click.group()
-@click.option('--debug/--no-debug', default=False)
-def cli(debug):
-    click.echo(f"Debug mode is {'on' if debug else 'off'}")
+def cli():
+    x=1
 
 @cli.command()
 @click.argument('product')
 def sync_products(product):
-   click.echo(f"{app.syncProducts(product)}")   
+   jsonPrint(app.syncProducts(product));   
 
+def jsonPrint(output: str):
+    return click.echo(json.dumps(output, indent=2));
