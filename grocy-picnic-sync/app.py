@@ -18,7 +18,12 @@ class GrocyPicnicSync():
     def __repr__(self) -> str:
         return f"{type(self).__name__}()"
 
-    def syncProducts(self, query:str):
-        return self.product.search(query)
+    def searchProducts(self, query:str):
+        self.product.search(query);
+        return self.product.getSearchSummary();
+    
+    def syncProduct(self, id:str):
+        # todo: converteer product en upload in grocy
+        return self.product.getProductFromSearch(id);
     
 

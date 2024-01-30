@@ -9,4 +9,4 @@ class PicnicClient():
         return f"{type(self).__name__}({self.username})"
     
     def searchProduct(self, query):                
-        return filter( lambda p: p.get('type') == 'SINGLE_ARTICLE', self.client.search(query)[0]['items']);
+        return list(filter( lambda p: p.get('type') == 'SINGLE_ARTICLE', self.client.search(query)[0]['items']));
