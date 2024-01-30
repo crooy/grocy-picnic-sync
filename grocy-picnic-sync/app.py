@@ -24,6 +24,6 @@ class GrocyPicnicSync():
     
     def syncProduct(self, id:str):
         # todo: converteer product en upload in grocy
-        return self.product.getProductFromSearch(id);
+        product = self.product.getProductFromSearch(id);
     
 
